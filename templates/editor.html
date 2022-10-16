@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACE in Action</title>
+<style type="text/css" media="screen">
+    #editor { 
+        height: 300px;
+        width: 600px
+    }
+    #toolbar {
+        background-color: darkviolet;
+        height: 50px;
+        width: 600px;
+        text-align: center;
+    }
+    #run-button {
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+
+<div id="editor">
+</div>
+<div id="toolbar">
+    <Button id="run-button">Run</Button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/sql");
+</script>
+</body>
+</html>
